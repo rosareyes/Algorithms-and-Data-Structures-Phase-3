@@ -4,6 +4,8 @@
 Group 88:
 Rosa Reyes  100434072
 Ines Sanz   100451104
+
+Github repository: https://github.com/rosareyes/Phase-3
 """
 import sys
 
@@ -234,6 +236,9 @@ class Map():
     
     #We use an aux function to implement the algorithm for all the minimum distances and paths
     def bellmanFord(self, start):
+        """ Time complexity:
+            O(V^2.E) because we are looping twice inside the vertexes and once inside the edges. 
+         """
         #previous is used to backtrack from the destination vertex to the source vertex to find the path.
         previous=[-1]*len(self.vertices) 
         distances = [sys.maxsize]*len(self.vertices) 
